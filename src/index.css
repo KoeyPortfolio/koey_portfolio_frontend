@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+:root {
+  --shadow-underline: inset 0 -10px 0 0;
+  --shadow-underline-indigo-100: inset 0 -.5em 0 0 var(--color-indigo-100);
+}

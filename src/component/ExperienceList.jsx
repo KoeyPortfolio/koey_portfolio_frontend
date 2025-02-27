@@ -1,8 +1,5 @@
 import React from "react";
 
-const offsetLeftPercentage = 25;
-const offsetRightPercentage = 100 - offsetLeftPercentage;
-
 export default function ExperienceList({ children = [] }) {
   const class1 = `before:absolute before:left-[25%] before:w-[2px] before:h-full before:bg-indigo-900 gap-10 flex flex-col`;
   
