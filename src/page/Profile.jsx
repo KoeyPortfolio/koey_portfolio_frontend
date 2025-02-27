@@ -15,16 +15,16 @@ export default function Profile() {
           취미는 타이치, 메디테이션, 독서, 영화시청<b>"</b>
         </p>
       </div>
-      <Title1 className={"mt-4"}>경력</Title1>
+      <Title1>경력</Title1>
       <Experience />
-      <Title1 className={"mt-4"}>기술스택</Title1>
+      <Title1>기술스택</Title1>
       <TechStacks />
-      <Title1 className={"mt-4"}>학력</Title1>
+      <Title1>학력</Title1>
       <AcademicBackground />
-      <Title1 className={"mt-4"}>자격 및 자격증</Title1>
-      <Title1 className={"mt-4"}>연수 및 교육생</Title1>
-      <Title1 className={"mt-4"}>대외활동 및 수상내역</Title1>
-      <Title1 className={"mt-4"}>병역사항</Title1>
+      <Title1>자격 및 자격증</Title1>
+      <Title1>연수 및 교육생</Title1>
+      <Title1>대외활동 및 수상내역</Title1>
+      <Title1>병역사항</Title1>
     </>
   );
 }
