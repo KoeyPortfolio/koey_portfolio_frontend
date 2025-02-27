@@ -10,7 +10,6 @@ export default function Profile() {
   return (
     <>
       <Introduction />
-      
       <Title1>경력</Title1>
       <Experience />
       <Title1>기술스택</Title1>

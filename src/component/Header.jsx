@@ -14,7 +14,7 @@ export default function Header() {
           <nav className="flex gap-[60px] py-[30px] items-center ">
             <Link to={ "/profile" } className={navItemClass}>프로필</Link>
             <Link to={ "/projects" } className={navItemClass}>프로젝트</Link>
-            <Link to={ "/portfolios" } className={navItemClass}>포트폴리오</Link>
+            {/* <Link to={ "/portfolios" } className={navItemClass}>포트폴리오</Link> */}
           </nav>
         </div>
       </div>
