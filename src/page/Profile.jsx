@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Title1 from "../component/Title1";
 import Experience from "../component/Experience"
 import TechStacks from "../component/TechStacks";
+import AcademicBackgroundRepository from "../../lib/repository/academic_backgrounds_repository";
+import TimeLineView from "../component/TimeLineView";
+import dayjs from "dayjs";
 
 export default function Profile() {
   return (
@@ -18,11 +21,57 @@ export default function Profile() {
       <Experience />
       <Title1 className={"mt-4"}>기술스택</Title1>
       <TechStacks />
-      <Title1 className={"mt-4"}>자격 및 자격증</Title1>
       <Title1 className={"mt-4"}>학력</Title1>
+      <AcademicBackground />
+      <Title1 className={"mt-4"}>자격 및 자격증</Title1>
       <Title1 className={"mt-4"}>연수 및 교육생</Title1>
       <Title1 className={"mt-4"}>대외활동 및 수상내역</Title1>
       <Title1 className={"mt-4"}>병역사항</Title1>
+    </>
+  );
+}
+
+function AcademicBackground() {
+  const [academicBackgrounds, setAcademicBackgrounds] = useState([]);
+
+  useEffect(bindAcademicBackgrounds, []);
+
+  function bindAcademicBackgrounds() {
+    const data = new AcademicBackgroundRepository().getAcademicBackgrounds();
+
+    setAcademicBackgrounds(data);
+  }
+
+  const dateCss = "font-bold text-lg";
+
+  return (
+    <>
+      <TimeLineView>
+        {
+          academicBackgrounds.map((x, i) =>
+            <TimeLineView.Item key={i}>
+              <TimeLineView.Item.Left>
+                <div className={`${dateCss} me-8`}>
+                  {dayjs(x.start).format('YYYY.MM')}
+                </div>
+                <div className={dateCss}>
+                  ~ {x.end ? dayjs(x.end).format('YYYY.MM') : '현재'}
+                </div>
+              </TimeLineView.Item.Left>
+              <TimeLineView.Item.Right>
+                <div>
+                  <div className="text-sm text-gray-500">{ x.educationType }</div>
+                  <div className="flex gap-3 items-end mb-1">
+                    <h2 className="text-lg font-bold">{ x.institutionName }</h2>
+                    <span className="text-indigo-600 bg-indigo-100 rounded-sm px-1">{x.degree}</span>
+                  </div>
+                  <p>{ x.fieldOfStudy }</p>
+                </div>
+              </TimeLineView.Item.Right>
+            </TimeLineView.Item>
+          )
+        }
+      </TimeLineView>
     </>
   );
 }
