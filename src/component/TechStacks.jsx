@@ -5,15 +5,13 @@ import IconScore from "./IconScore";
 export default function TechStacks() {
   return (
     <>
-      <div className="px-2 py-5 rounded-2xl inset-shadow-sm bg-stone-100">
-        <TechStackCardList />
-      </div>
+      <TechStackCardList />
     </>
   );
 }
 
 function TechStackCardList() {
-  const techStackCardList = "grid gap-2 justify-items-center grid-cols-[repeat(auto-fit,minmax(280px,auto))] auto-rows-[1fr]";
+  const techStackCardList = "grid gap-5 justify-items-center grid-cols-[repeat(auto-fit,minmax(280px,auto))] auto-rows-[1fr]";
 
   return (
     <>
@@ -39,7 +37,7 @@ function TechStackCard({ category }) {
     setItems(data);
   }
 
-  const techStackCard = "flex flex-col justify-start w-70 rounded-2xl shadow-md p-5 bg-white";
+  const techStackCard = "flex flex-col justify-start w-full rounded-2xl shadow-md p-5 bg-white";
   const techCategory = "text-xl font-bold w-fit shadow-(--shadow-underline-indigo-100) mb-4";
   const techItem = "flex justify-between mt-1";
 
