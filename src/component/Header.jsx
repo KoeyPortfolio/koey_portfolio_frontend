@@ -5,7 +5,7 @@ const navItemClass = "font-bold";
 
 export default function Header() {
   return (
-    <header className="bg-indigo-950 shadow-xs text-white">
+    <header className="bg-white border-b border-indigo-900 text-indigo-900">
       <div className="flex items-center justify-between max-w-[1080px] mx-auto text-[1.1em] px-[40px]">
         <div>
           <Link className="font-bold text-3xl">H.Minhyeok</Link>
