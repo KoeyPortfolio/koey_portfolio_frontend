@@ -1,6 +1,32 @@
-import React from "react";
+import dayjs from "dayjs";
+import React, { useEffect, useState } from "react";
+import ExperienceRepository from "../../lib/repository/experience_repository";
 
-export default function ExperienceList({ children = [] }) {
+export default function Experience() {
+  const [experiences, setExperiences] = useState([]);
+
+  useEffect(bindExperiences, [])
+
+  function bindExperiences() {
+    const data = new ExperienceRepository().getExperiences();
+    
+    setExperiences(data);
+  }
+
+  return (
+    <>
+      <ExperienceList>
+        {
+          experiences.map((x, i) =>
+            <ExperienceList.Item key={i} company={x.company} department={x.department} jobTitle={x.jobTitle} start={dayjs(x.start).format('YYYY.MM')} end={dayjs(x.end).format('YYYY.MM')} details={x.details} />
+          )
+        }
+      </ExperienceList>
+    </>
+  );
+}
+
+function ExperienceList({ children = [] }) {
   const class1 = `before:absolute before:left-[25%] before:w-[2px] before:h-full before:bg-indigo-900 gap-10 flex flex-col`;
   
   return (
