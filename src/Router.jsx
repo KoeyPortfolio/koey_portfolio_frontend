@@ -11,6 +11,7 @@ export default function Router() {
   return (
     <Routes>
       <Route path="*" element={<DefaultLayout />}>
+        <Route path="" element={<Profile />} />
         <Route path="profile" element={<Profile />} />
         <Route path="projects" element={<Projects />} />
         <Route path="portfolios" element={<Portfolios />} />

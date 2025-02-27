@@ -8,7 +8,7 @@ export default function Header() {
     <header className="bg-white border-b border-indigo-900 text-indigo-900">
       <div className="flex items-center justify-between max-w-[1080px] mx-auto text-[1.1em] px-[40px]">
         <div>
-          <Link className="font-bold text-3xl">H.Minhyeok</Link>
+          <Link className="font-bold text-3xl" to={"/"}>H.Minhyeok</Link>
         </div>
         <div>
           <nav className="flex gap-[60px] py-[30px] items-center ">
