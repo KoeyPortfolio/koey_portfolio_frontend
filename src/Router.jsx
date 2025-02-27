@@ -15,7 +15,6 @@ export default function Router() {
         <Route path="profile" element={<Profile />} />
         <Route path="projects" element={<Projects />} />
         <Route path="portfolios" element={<Portfolios />} />
-        <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

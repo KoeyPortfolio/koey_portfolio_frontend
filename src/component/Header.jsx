@@ -15,7 +15,6 @@ export default function Header() {
             <Link to={ "/profile" } className={navItemClass}>프로필</Link>
             <Link to={ "/projects" } className={navItemClass}>프로젝트</Link>
             <Link to={ "/portfolios" } className={navItemClass}>포트폴리오</Link>
-            <Link to={ "/contact" } className={navItemClass}>연락처</Link>
           </nav>
         </div>
       </div>
