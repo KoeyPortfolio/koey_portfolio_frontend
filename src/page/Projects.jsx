@@ -1,9 +1,31 @@
 import React from "react";
+import ProjectCard from "../component/ProjectCard";
 
 export default function Projects() {
+
   return (
     <>
-      <h1 className="text-6xl">프로젝트 페이지입니다.</h1>
+      <h1 className="text-2xl font-bold">프로젝트</h1>
+      <ProjectCard project = {{
+        title: '프로젝트 타이틀',
+        thumbnailUrl: "https://plus.unsplash.com/premium_photo-1727456098472-d1d43fe21c5e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        start: '2024-10.01',
+        end: null,
+        usedSkills: [
+          'Spring Boot',
+          'Mybatis',
+          'mariaDB',
+          'react.js',
+          'tailwindcss',
+          'git'
+        ],
+        summaries: [
+          '간단히 개발 규모 소개',
+          '간단히 구현한 기능 소개',
+          '간단히 달성한 성과 소개'
+        ],
+        gitLink: "https://github.com/KoeyPortfolio"
+      }} />
     </>
   );
 }
