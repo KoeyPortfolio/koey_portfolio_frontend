@@ -1,10 +1,10 @@
 import React from "react";
 
 export default function LinkIcon({className}) {
-  const linkIconCss = "material-symbols-outlined " + className;
+  const linkIconCss = "bi bi-link " + className;
   return (
     <>
-      <span className={ linkIconCss }>link</span>
+      <i className={ linkIconCss }></i>
     </>
   );
 }

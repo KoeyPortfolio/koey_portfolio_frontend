@@ -3,7 +3,7 @@ import Card from "./Card";
 import dayjs from "dayjs";
 import LinkIcon from "./LinkIcon";
 
-export default function ProjectCard({ project: { title, thumbnailUrl, start, end, usedSkills, summaries, gitLink } }) {
+export default function ProjectCard({ project: { title, thumbnailUrl, start, end, usedSkills, summaries, gitLink }, onClick }) {
   const projectCardCss = "w-full max-w-110 border border-indigo-50 bg-white flex flex-col justify-stretch";
   const thumbnailCss = "block w-full h-60 object-cover";
   const cardFooterCss = "p-5 flex flex-col justify-stretch gap-2 grow";
@@ -16,7 +16,7 @@ export default function ProjectCard({ project: { title, thumbnailUrl, start, end
   return (
     <>
       <Card className={projectCardCss}>
-        <div onClick={e => alert('enter to project detail.')} className="hover:cursor-pointer">
+        <div onClick={onClick} className="hover:cursor-pointer">
           <h2 className="p-5 text-lg font-bold object-cover">{ title }</h2>
           <img className={ thumbnailCss } src={ thumbnailUrl } alt="프로젝트 대표 이미지" />
         </div>

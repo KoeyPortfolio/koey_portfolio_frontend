@@ -6,6 +6,7 @@ import Profile from "./page/Profile";
 import Projects from "./page/Projects";
 import Portfolios from "./page/Portfolios";
 import Contact from "./page/Contact";
+import ProjectDetailPage from "./page/ProjectDetailPage";
 
 export default function Router() {
   return (
@@ -14,6 +15,7 @@ export default function Router() {
         <Route path="" element={<Profile />} />
         <Route path="profile" element={<Profile />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="projects/:id" element={<ProjectDetailPage />} />
         {/* <Route path="portfolios" element={<Portfolios />} /> */}
         <Route path="*" element={<NotFound />} />
       </Route>
