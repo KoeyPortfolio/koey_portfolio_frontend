@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProjectRepository from "../../lib/repository/project_repository";
+import GalaryView from "../component/GalaryView";
 
 export default function ProjectDetailPage() {
   const {id: projectId} = useParams();
@@ -23,13 +24,15 @@ export default function ProjectDetailPage() {
   const galaryPreviewImgCss = "block object-cover w-40 aspect-[calc(16/10)]";
   const galaryPreviewImgItemCss = "shrink-0";
   const galaryBtnCss = "w px-3 text-3xl text-black/0 font-bold hover:bg-gray-900/40 hover:text-gray-50/60 hover:cursor-pointer flex items-center justify-center";
-  const imgs = [
-
-  ]
 
   return (
     <>
       <h2 className="text-2xl font-bold my-10">갤러리</h2>
+      <GalaryView>
+        <GalaryView.Item>
+          
+        </GalaryView.Item>
+      </GalaryView>
       <div className="mx-auto max-w-200 min-w-120">
         <ul className={galaryPreviewImgListCss}>
           <li className={galaryPreviewImgItemCss}>
