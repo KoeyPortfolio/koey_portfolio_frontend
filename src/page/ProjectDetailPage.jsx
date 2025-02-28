@@ -39,19 +39,19 @@ export default function ProjectDetailPage() {
             <img className={galaryPreviewImgCss} src="https://images.unsplash.com/photo-1737392402963-a489a17826eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI1fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
           </li>
           <li className={galaryPreviewImgItemCss}>
-            <img className={galaryPreviewImgCss} src="https://images.unsplash.com/photo-1737392402963-a489a17826eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI1fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
+            <img className={galaryPreviewImgCss} src="https://images.unsplash.com/photo-1739996698574-30dfcdaa64b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIxfEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
           </li>
           <li className={galaryPreviewImgItemCss}>
-            <img className={galaryPreviewImgCss} src="https://images.unsplash.com/photo-1737392402963-a489a17826eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI1fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
+            <img className={galaryPreviewImgCss} src="https://plus.unsplash.com/premium_photo-1736392070194-530edb275b36?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI3fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
           </li>
           <li className={galaryPreviewImgItemCss}>
-            <img className={galaryPreviewImgCss} src="https://images.unsplash.com/photo-1737392402963-a489a17826eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI1fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
+            <img className={galaryPreviewImgCss} src="https://images.unsplash.com/photo-1736618625357-2a7f197f8c23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
           </li>
           <li className={galaryPreviewImgItemCss}>
-            <img className={galaryPreviewImgCss} src="https://images.unsplash.com/photo-1737392402963-a489a17826eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI1fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
+            <img className={galaryPreviewImgCss} src="https://images.unsplash.com/photo-1740257862940-66edfed66a6a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMzfEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
           </li>
           <li className={galaryPreviewImgItemCss}>
-            <img className={galaryPreviewImgCss} src="https://images.unsplash.com/photo-1737392402963-a489a17826eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI1fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
+            <img className={galaryPreviewImgCss} src="https://plus.unsplash.com/premium_photo-1673139285535-80a03340beda?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM3fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"/>
           </li>
         </ul>
         <div className="bg-gray-900 flex flex-col relative justify-center">
