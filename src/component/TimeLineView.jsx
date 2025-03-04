@@ -26,8 +26,8 @@ TimeLineView.Item = function({ children }) {
   const leftCss = "w-[25%] text-end pe-[6%] relative before:w-[10px] before:h-[10px] before:bg-indigo-600 before:rounded-full before:absolute before:top-[1em] before:translate-y-[-5px] before:left-full before:translate-x-[-4px] after:w-[18px] after:h-[18px] after:rounded-full after:border after:border-indigo-600 after:absolute after:top-[1em] after:translate-y-[-9px] after:left-full after:translate-x-[-8px]";
   const rightCss = "w-[75%] ps-[6%]";
 
-  const leftComponent = Children.toArray(children).filter(x => x.type === TimeLineView.Item.Left);
-  const rightComponent = Children.toArray(children).filter(x => x.type === TimeLineView.Item.Right);
+  const leftComponent = Children.toArray(children).filter(x => x.type === TimeLineView.Item.Left).find(_ => true);
+  const rightComponent = Children.toArray(children).filter(x => x.type === TimeLineView.Item.Right).find(_ => true);
 
   return (
     <>

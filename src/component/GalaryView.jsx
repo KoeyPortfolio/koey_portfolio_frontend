@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function GalaryView({ imgUrls=[] }) {
   const [mainImgUrl, setMainImgUrl] = useState(undefined);
-  const scrollContainerRef = useRef(null);
 
   useEffect(bindMainImgUrl, [imgUrls]);
 
@@ -20,7 +19,7 @@ export default function GalaryView({ imgUrls=[] }) {
 
   return (
     <>
-      <ul className={galaryViewItemListCss} ref={scrollContainerRef}>
+      <ul className={galaryViewItemListCss}>
         {
           imgUrls.map((x, i) =>
             <li key={i} className={galaryViewItemCss}>
