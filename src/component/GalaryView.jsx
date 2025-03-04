@@ -12,7 +12,7 @@ export default function GalaryView({ imgUrls=[] }) {
     setMainImgUrl(data);
   }
 
-  const galaryViewItemListCss = "flex overflow-auto";
+  const galaryViewItemListCss = "flex overflow-auto bg-gray-900 border-b-4 border-gray-900";
   const galaryViewItemCss = "w-[22%] aspect-[16/10] shrink-0";
   const mainItemCss = "aspect-[16/10]";
   const imgListCss = "w-full h-full block object-cover hover:cursor-pointer";
