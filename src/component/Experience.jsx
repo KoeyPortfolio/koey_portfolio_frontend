@@ -9,9 +9,8 @@ export default function Experience() {
   useEffect(bindExperiences, [])
 
   function bindExperiences() {
-    const data = new ExperienceRepository().getExperiences();
-    
-    setExperiences(data);
+    new ExperienceRepository().getExperiences()
+    .then(data => setExperiences(data));
   }
 
   return (

@@ -9,9 +9,8 @@ export default function Projects() {
   useEffect(bindProjects, []);
 
   function bindProjects() {
-    const data = projectRepository.getProjects();
-
-    setProjects(data);
+    projectRepository.getProjects()
+    .then(data => setProjects(data));
   }
 
   return (

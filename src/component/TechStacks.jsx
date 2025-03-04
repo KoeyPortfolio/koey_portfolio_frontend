@@ -11,16 +11,24 @@ export default function TechStacks() {
 }
 
 function TechStackCardList() {
+  const [techCategories, setTechCategories] = useState([]);
+
+  useEffect(bindTechCategories, []);
+
+  function bindTechCategories() {
+    new TechStackRepository().getTechCategories()
+    .then(data => setTechCategories(data));
+  }
+
   const techStackCardList = "grid gap-5 justify-items-center grid-cols-[repeat(auto-fit,minmax(280px,auto))] auto-rows-[1fr]";
 
   return (
     <>
       <ul className={techStackCardList}>
-        <TechStackCard category={'웹 프레임워크'} />
-        <TechStackCard category={'프로그래밍 언어'} />
-        <TechStackCard category={'데이터베이스'} />
-        <TechStackCard category={'버전관리 툴'} />
-        <TechStackCard category={'협업 툴'} />
+        {
+          techCategories.map((x, i) =>
+          <TechStackCard key={i} category={x} />)
+        }
       </ul>
     </>
   );
@@ -32,9 +40,8 @@ function TechStackCard({ category }) {
   useEffect(bindItems, [category]);
 
   function bindItems() {
-    const data = new TechStackRepository().getTechStackByCategory(category);
-
-    setItems(data);
+    new TechStackRepository().getTechStackByCategory(category)
+    .then(data => setItems(data));
   }
 
   const techStackCard = "flex flex-col justify-start w-full rounded-2xl shadow-md p-5 bg-white";

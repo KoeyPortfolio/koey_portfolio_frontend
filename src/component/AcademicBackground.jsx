@@ -8,10 +8,11 @@ export default function AcademicBackground() {
 
   useEffect(bindAcademicBackgrounds, []);
 
-  function bindAcademicBackgrounds() {
-    const data = new AcademicBackgroundRepository().getAcademicBackgrounds();
+  const academicBackgroundRepository = new AcademicBackgroundRepository();
 
-    setAcademicBackgrounds(data);
+  function bindAcademicBackgrounds() {
+    academicBackgroundRepository.getAcademicBackgrounds()
+    .then(data => setAcademicBackgrounds(data));
   }
 
   const dateCss = "font-bold text-lg";
