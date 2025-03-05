@@ -27,7 +27,10 @@ export default function ProjectDetailPage() {
       {
         projectDetail && <GalaryListView items={projectDetail.imgs} onItemClick={item => setDetailImgUrl(item.imgUrl)} />
       }
-      <FullScreenImage imgUrl={detailImgUrl} onExit={_ => setDetailImgUrl(undefined)} />
+      {
+        detailImgUrl && <FullScreenImage imgUrl={detailImgUrl} onExit={_ => setDetailImgUrl(undefined)} />
+      }
+      
       <Title1>프로젝트 설명</Title1>
       <p>이 프로젝트는 무슨무슨 프로젝트입니다. 인스타그램을 모방하는 SNS를 만들거나 그냥 토스 웹 사이트 클론코딩을 해보려고 했습니다.</p>
       <Title1>내가 기여한 부분</Title1>

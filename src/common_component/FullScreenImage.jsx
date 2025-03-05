@@ -7,15 +7,12 @@ export default function FullScreenImage({ imgUrl, onExit }) {
   
   return (
     <>
-      {
-        imgUrl && 
-        <div className={containerCss}>
-          <img src={imgUrl} className={imgCss} />
-          <button type="button" className={exitBtnCss} onClick={onExit}>
-            <i class="bi bi-x-lg"></i>
-          </button>
-        </div>
-      }
+      <div className={containerCss}>
+        <img src={imgUrl} className={imgCss} />
+        <button type="button" className={exitBtnCss} onClick={onExit}>
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
     </>
   );
 }
