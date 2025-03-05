@@ -4,6 +4,7 @@ import ProjectRepository from "../../lib/repository/project_repository";
 import GalaryView from "../component/GalaryView";
 import Title1 from "../component/Title1";
 import GalaryListView from "../common_component/GalaryListView";
+import FullScreenImage from "../common_component/FullScreenImage";
 
 export default function ProjectDetailPage() {
   const {id: projectId} = useParams();
@@ -21,20 +22,12 @@ export default function ProjectDetailPage() {
 
   return (
     <>
-      <div>(프로젝트 헤드): "프로젝트 이름"</div>
+      <ProjectDetailHeader>{ projectDetail && projectDetail.title }</ProjectDetailHeader>
       <Title1>캡쳐 이미지</Title1>
       {
         projectDetail && <GalaryListView items={projectDetail.imgs} onItemClick={item => setDetailImgUrl(item.imgUrl)} />
       }
-      {
-        detailImgUrl && 
-        <div className="fixed w-screen h-screen bg-gray-900/80 m-auto top-0 left-0 flex justify-center items-center">
-          <img src={detailImgUrl} className="h-[90%] w-[90%] object-contain" />
-          <button type="button" className="absolute bg-gray-900/50 text-gray-50/50 hover:bg-white hover:text-gray-900 right-[10%] top-[10%] aspect-square w-12 rounded-full hover:cursor-pointer" onClick={_ => setDetailImgUrl(undefined)}>
-            <i class="bi bi-x-lg"></i>
-          </button>
-        </div>
-      }
+      <FullScreenImage imgUrl={detailImgUrl} onExit={_ => setDetailImgUrl(undefined)} />
       <Title1>프로젝트 설명</Title1>
       <p>이 프로젝트는 무슨무슨 프로젝트입니다. 인스타그램을 모방하는 SNS를 만들거나 그냥 토스 웹 사이트 클론코딩을 해보려고 했습니다.</p>
       <Title1>내가 기여한 부분</Title1>
@@ -69,6 +62,18 @@ export default function ProjectDetailPage() {
         <li>MariaDB</li>
         <li>Git</li>
       </ul>
+    </>
+  );
+}
+
+function ProjectDetailHeader({ children }) {
+  const headerCss = "flex justify-center items-center text-3xl font-bold mb-25";
+
+  return (
+    <>
+      <div className={headerCss}>
+        { children }
+      </div>
     </>
   );
 }
